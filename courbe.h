@@ -9,6 +9,7 @@
 #include "point.h"
 
 #include "vector"
+#include "fstream"
 
 class Courbe {
 private:
@@ -24,6 +25,8 @@ public:
     std::vector<Point> GetListPointSegment1();
     std::vector<Point> GetListPointSegment2();
     std::vector<Point> GetListPointCourbe();
+
+    void WriteOnFile();
 
 };
 

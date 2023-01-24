@@ -45,3 +45,18 @@ std::vector<Point> Courbe::GetListPointSegment2() {
 std::vector<Point> Courbe::GetListPointCourbe() {
     return _list_point_courbe;
 }
+
+void Courbe::WriteOnFile() {
+    std::string text = "{";
+
+    for (int i = 0; i < _list_point_courbe.size(); i++){
+        text = text + ", [" + std::to_string(_list_point_courbe[i].GetX()) + ", " + std::to_string(_list_point_courbe[i].GetY()) + "]";
+    }
+    text = text + "}";
+
+    std::fstream fichier;
+    fichier.open("point_courbe.txt", std::ios::out);
+
+    fichier << text;
+    fichier.close();
+}

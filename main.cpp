@@ -4,7 +4,6 @@
 
 
 
-
 int main(){
     //Definition des points qui portent les 2 segments
     Point a(0, 0);
@@ -15,6 +14,9 @@ int main(){
     Point_inter point_inter(a, b, c, d);
 
     Courbe courbe_1(30, point_inter, a, d);
+
+    courbe_1.WriteOnFile();
+
 
 };
 
